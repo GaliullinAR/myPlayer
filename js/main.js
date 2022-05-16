@@ -11,15 +11,15 @@ const progress = document.querySelector('.progress');
 
 const title = document.querySelector('.song');
 const cover = document.querySelector('.cover-img');
-const imgSrc = document.querySelector('.src__img');
+const imgSrc = document.querySelector('.img__src');
 
 const songs = [
-  'Big Baby Tape, kizaru - 99 Problems',
-  'JONY, HammAli - Наверно, ты меня не помнишь',
-  'Tinlicker, Helsloot - Because You Move Me'
+  'Big_Baby_Tape_kizaru_-_99_Problems',
+  'JONY_HammAli_-_Naverno_ty_menya_ne_pomnish',
+  'Tinlicker_Helsloot_-_Because_You_Move_Me'
 ];
 
-let songIndex = 0;
+let songIndex = 2;
 
 function loadSong(song) {
   title.innerHTML = song;
@@ -31,11 +31,15 @@ loadSong(songs[songIndex]);
 
 function playSong() {
   player.classList.add('playing');
+  cover.classList.add('active');
+  imgSrc.src = 'img/pause.png';
   audio.play();
 }
 
 function pauseSong() {
   player.classList.remove('playing');
+  cover.classList.remove('active');
+  imgSrc.src = 'img/play.svg';
   audio.pause();
 }
 
