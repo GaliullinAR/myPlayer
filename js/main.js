@@ -52,4 +52,28 @@ playBtn.addEventListener('click', () => {
   }
 });
 
+function nextSong() {
+  songIndex++;
 
+  if (songIndex > songs.length - 1) {
+    songIndex = 0;
+  }
+
+  loadSong(songs[songIndex]);
+  playSong();
+}
+
+nextBtn.addEventListener('click', nextSong);
+
+function prevSong() {
+  songIndex--;
+
+  if (songIndex < 0) {
+    songIndex = songs.length - 1
+  }
+
+  loadSong(songs[songIndex]);
+  playSong();
+}
+
+prevBtn.addEventListener('click', prevSong);
