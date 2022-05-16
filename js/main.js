@@ -19,7 +19,7 @@ const songs = [
   'Tinlicker_Helsloot_-_Because_You_Move_Me'
 ];
 
-let songIndex = 2;
+let songIndex = 2 ;
 
 function loadSong(song) {
   title.innerHTML = song;
