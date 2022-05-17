@@ -32,7 +32,7 @@ loadSong(songs[songIndex]);
 function playSong() {
   player.classList.add('playing');
   cover.classList.add('active');
-  imgSrc.src = 'img/pause.png';
+  imgSrc.src = 'img/pause.svg';
   audio.play();
 }
 
@@ -77,3 +77,23 @@ function prevSong() {
 }
 
 prevBtn.addEventListener('click', prevSong);
+
+function updateProgress(e) {
+  const { duration, currentTime } = e.srcElement;
+  const progressPrecent = (currentTime / duration) * 100;
+  progress.style.width = `${progressPrecent}%`;
+}
+
+audio.addEventListener('timeupdate', updateProgress);
+
+function setProgress(e) {
+  const width = this.clientWidth;
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+
+  audio.currentTime = (clickX / width) * duration;  
+}
+
+progressContainer.addEventListener('click', setProgress);
+
+audio.addEventListener('ended', nextSong);

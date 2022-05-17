@@ -49,7 +49,7 @@
 }
 
 .song {
-  width: 100%;
+  max-width: 100%;
   word-wrap: break-word;
   font-size: 24px;
   font-weight: 700;
@@ -74,7 +74,7 @@
   background: #2b3c5b;
   border-radius: 5px;
   height: 6px;
-  width: 150px;
+  /* width: 150px; */
 }
 
 .buttons {
@@ -99,8 +99,6 @@
 
 .img-btn {
   max-width: 100%;
-  object-position: center;
-  object-fit: cover;
 }
 
 .prev,
