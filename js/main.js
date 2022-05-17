@@ -16,10 +16,19 @@ const imgSrc = document.querySelector('.img__src');
 const songs = [
   'Big_Baby_Tape_kizaru_-_99_Problems',
   'JONY_HammAli_-_Naverno_ty_menya_ne_pomnish',
-  'Tinlicker_Helsloot_-_Because_You_Move_Me'
+  'Tinlicker_Helsloot_-_Because_You_Move_Me',
+  'FINIKALEKS ATAMAN-YUraSHatunov',
+  'Artik_Asti_-_Garmoniya',
+  'FINIK_ALEKS_ATAMAN_-_Devochka_banditka',
+  'FinikFinya_ALEKS_ATAMAN_-_Dialogi_tet-a-tet',
+  'HammAli_Navai_Jah_Khalib_-_Bozhe_kak_zaviduyu',
+  'JONY_-_Titry',
+  'Miyagi_Andy_Panda_Mav-d_-_Marmalade',
+  'Ruki_Vverkh_-_Polunochnoe_taksi',
+  'Tones_and_I_-_Dance_Monkey'
 ];
 
-let songIndex = 2 ;
+let songIndex = 0;
 
 function loadSong(song) {
   title.innerHTML = song;

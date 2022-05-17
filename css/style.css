@@ -95,6 +95,7 @@
   align-items: center;
   width: 55px;
   height: 55px;
+  outline: none;
 }
 
 .img-btn {
